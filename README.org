@@ -1,0 +1,13 @@
+* What this is
+This is a super quick and hacky example of how to use the Tezos libraries from OCaml. It's pretty quick and dirty and makes some assumptions about how I typically run my nodes.
+
+* Basic instructions
+Download the tezos repository and run =make= and =make install=. This will install findlib packages for Tezos. These packages can then be used from the client. Once the node is built, you should be able to build the repository
+
+You should run a node, with the P2P listening on port 18739. An easy way to do this is the following command (where =$PATH_TO_TEZOS_REPO= is set correctly):
+
+#+BEGIN_SRC bash
+eval "$PATH_TO_TEZOS_REPO/src/bin_node/tezos-sandboxed-node.sh 9 --connections 0" &
+#+END_SRC
+
+You should then be able to communicate with this node and see as blocks come in. You will need to activate the alpha protocol. The easiest way to do this is the =$PATH_TO_TEZOS_REPO/src/bin_client/tezos-init-sandboxed-client.sh= script.

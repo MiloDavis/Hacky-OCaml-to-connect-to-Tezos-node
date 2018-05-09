@@ -1,0 +1,15 @@
+(executable
+ ((name main)
+  (libraries (tezos-base
+              tezos-stdlib-unix
+              tezos-shell-services
+              tezos-rpc
+              tezos-client-base
+              tezos-client-base-unix
+              tezos-rpc-http))
+  (flags (:standard -w -9+27-30-32-40@8
+          -safe-string
+          -open Tezos_base__TzPervasives
+          -open Tezos_rpc
+          -open Tezos_shell_services
+          -open Tezos_client_base))))
